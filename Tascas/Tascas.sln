@@ -2,7 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level_2", "Level_2", "{4E43D207-D60A-4585-B5A4-9B24FD454F0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasca0", "Tasca0\Tasca0.csproj", "{892CF906-548C-4C66-8EDE-9A0E2C1A4762}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasca_0", "Tasca_0\Tasca_0.csproj", "{892CF906-548C-4C66-8EDE-9A0E2C1A4762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasca_1", "Tasca_1\Tasca_1.csproj", "{D6996A64-270E-4A0F-BE0B-DAEF0CCACF73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,8 +16,13 @@ Global
 		{892CF906-548C-4C66-8EDE-9A0E2C1A4762}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{892CF906-548C-4C66-8EDE-9A0E2C1A4762}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{892CF906-548C-4C66-8EDE-9A0E2C1A4762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6996A64-270E-4A0F-BE0B-DAEF0CCACF73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6996A64-270E-4A0F-BE0B-DAEF0CCACF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6996A64-270E-4A0F-BE0B-DAEF0CCACF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6996A64-270E-4A0F-BE0B-DAEF0CCACF73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{892CF906-548C-4C66-8EDE-9A0E2C1A4762} = {4E43D207-D60A-4585-B5A4-9B24FD454F0D}
+		{D6996A64-270E-4A0F-BE0B-DAEF0CCACF73} = {4E43D207-D60A-4585-B5A4-9B24FD454F0D}
 	EndGlobalSection
 EndGlobal

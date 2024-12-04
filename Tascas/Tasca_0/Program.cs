@@ -1,4 +1,4 @@
-﻿namespace Tasca0;
+﻿namespace Tasca_0;
 
 class Program
 {
