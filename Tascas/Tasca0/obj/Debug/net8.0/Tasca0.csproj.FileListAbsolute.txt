@@ -1,0 +1,15 @@
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\obj\Debug\net8.0\Tasca0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\obj\Debug\net8.0\Tasca0.AssemblyInfoInputs.cache
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\obj\Debug\net8.0\Tasca0.AssemblyInfo.cs
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\obj\Debug\net8.0\Tasca0.csproj.CoreCompileInputs.cache
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\obj\Debug\net8.0\Tasca0.sourcelink.json
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\bin\Debug\net8.0\Tasca0.exe
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\bin\Debug\net8.0\Tasca0.deps.json
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\bin\Debug\net8.0\Tasca0.runtimeconfig.json
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\bin\Debug\net8.0\Tasca0.dll
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\bin\Debug\net8.0\Tasca0.pdb
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\obj\Debug\net8.0\Tasca0.dll
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\obj\Debug\net8.0\refint\Tasca0.dll
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\obj\Debug\net8.0\Tasca0.pdb
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\obj\Debug\net8.0\Tasca0.genruntimeconfig.cache
+C:\Users\portatil\RiderProjects\Programacio\Programacio\ConsoleApp1\Tasca0\obj\Debug\net8.0\ref\Tasca0.dll
