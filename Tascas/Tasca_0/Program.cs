@@ -23,7 +23,7 @@ class Program
                 Console.WriteLine("Ingrese el nombre del usuario existente");
                 string nomexistent = Console.ReadLine();
                 banquer.CreaClient(nomexistent);
-                Console.WriteLine(Client.Saldo);
+                Console.WriteLine(banquer.VeureDiners());
                 Console.WriteLine("¿Quieres Ingresar (1) o Retirar (2)");
                 string IoR = Console.ReadLine();
                 switch (IoR)
@@ -37,14 +37,13 @@ class Program
                     case "2":
                         Console.WriteLine("¿Quanto quieres Retirar?");
                         int Retirar = int.Parse(Console.ReadLine());
-                        
                         break;
                 }
                 break;
             case "3":
                 break;
             default:
-                Console.WriteLine("Me cago en tu puta madre");
+                Console.WriteLine("Ingresa una opción valida");
                 break;
         }
     }

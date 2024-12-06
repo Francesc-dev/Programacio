@@ -22,6 +22,7 @@ public class Banker
             client.Saldo += quantitat;
             return $"{nomClient}: {quantitat} € ingressats correctament";
         }
+
         return $"Tu no ets client {nomClient}";
     }
 
@@ -38,6 +39,17 @@ public class Banker
 
             client.Saldo -= quantitat + comissio;
             return $"{nomClient}: Té {quantitat} € et queden {client.Saldo} €";
+        }
+
+        return $"Tu no ets client {nomClient}";
+    }
+    
+    public string VeureDiners(string nomClient)
+    {
+        if (clients.ContainsKey(nomClient))
+        {
+            var client = clients[nomClient];
+            return $"{nomClient}: Téns actualment {client.Saldo} €";
         }
         return $"Tu no ets client {nomClient}";
     }
