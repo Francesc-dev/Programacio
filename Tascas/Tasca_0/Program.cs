@@ -7,44 +7,69 @@ class Program
     static void Main(string[] args)
     {
         var banquer = new Banker();
-
-        Console.WriteLine("¿Que quieres hacer?");
-        Console.WriteLine("Crear (1), Mover (2) o Eliminar (3)");
-        string Leer = Console.ReadLine();
-
-        switch (Leer)
+        while(true)
         {
-            case "1":
-                Console.WriteLine("Ingrese el nuevo nombre del usuario");
-                string crearnom = Console.ReadLine();
-                banquer.CreaClient(crearnom);
-                break;
-            case "2":
-                Console.WriteLine("Ingrese el nombre del usuario existente");
-                string nomexistent = Console.ReadLine();
-                banquer.CreaClient(nomexistent);
-                Console.WriteLine(banquer.VeureDiners());
-                Console.WriteLine("¿Quieres Ingresar (1) o Retirar (2)");
-                string IoR = Console.ReadLine();
-                switch (IoR)
-                {
-                    case "1":
-                        Console.WriteLine("¿Quanto quieres Ingresar?");
-                        int Ingresar = int.Parse(Console.ReadLine());
-                        Console.WriteLine(banquer.PosarDiners(nomexistent, Ingresar));
-                        Console.WriteLine(banquer.TreureDiners("Frederic", 200));
-                        break;
-                    case "2":
-                        Console.WriteLine("¿Quanto quieres Retirar?");
-                        int Retirar = int.Parse(Console.ReadLine());
-                        break;
-                }
-                break;
-            case "3":
-                break;
-            default:
-                Console.WriteLine("Ingresa una opción valida");
-                break;
+            Thread.Sleep(1000);
+            Console.WriteLine("¿Què vols fer?");
+            Thread.Sleep(1000);
+            Console.WriteLine("(1) Crear, (2) Moure, (3) Eliminar o (4) Sortir");
+            string Opciones = Console.ReadLine();
+
+            switch (Opciones)
+            {
+                case "1":
+                    Console.WriteLine("Introduïu el nom nou de l'usuari");
+                    string crearclient = Console.ReadLine();
+                    banquer.CreaClient(crearclient);
+                    Console.WriteLine("Usuari creat correctament");
+                    break;
+                case "2":
+                    Console.WriteLine("Introduïu el nom de l'usuari existent");
+                    string nomexistent = Console.ReadLine();
+                    if (banquer.ClientExisteix(nomexistent))
+                    {
+                        Console.WriteLine("¿Que moviment vols fer?");
+                        Thread.Sleep(1000);
+                        Console.WriteLine(
+                            "(1) Ingressar, (2) Retirar, (3) Veure els diners, (4) Tornar o (5) Sortir");
+                        string IoR = Console.ReadLine();
+                        switch (IoR)
+                        {
+                            case "1":
+                                Console.WriteLine("¿Quant vols Ingressar?");
+                                int Ingresar = int.Parse(Console.ReadLine());
+                                Console.WriteLine(banquer.PosarDiners(nomexistent, Ingresar));
+                                break;
+                            case "2":
+                                Console.WriteLine("¿Quant vols Retirar?");
+                                int Retirar = int.Parse(Console.ReadLine());
+                                Console.WriteLine(banquer.TreureDiners(nomexistent, Retirar));
+                                break;
+                            case "3":
+                                Console.WriteLine(banquer.VeureDiners(nomexistent));
+                                break;
+                            case "4":
+                                break;
+                            case "5":
+                                return;
+                            default:
+                                Console.WriteLine("Introduïu una opció vàlida");
+                                break;
+                        }
+                    }
+                    break;
+                case "3":
+                    Console.WriteLine("Introduïu el nom del compte que voleu suprimir");
+                    string eliminaclient = Console.ReadLine();
+                    banquer.EliminaClient(eliminaclient);
+                    Console.WriteLine("Client suprimit correctament");
+                    break;
+                case "4":
+                    return;
+                default:
+                    Console.WriteLine("Introduïu una opció vàlida");
+                    break;
+            }
         }
     }
 }
