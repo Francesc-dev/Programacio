@@ -4,28 +4,32 @@ class Program
 {
     static void Main(string[] args)
     {
-        var boxeador = new Boxeador();
+        Console.WriteLine("Introduce el nombre del boxeador 1");
+        string Jugador1 = Console.ReadLine();
+        var boxeador1 = new Boxeador(Jugador1);
+        Console.WriteLine("Introduce el nombre del boxeador 2");
+        string Jugador2 = Console.ReadLine();
+        var boxeador2 = new Boxeador(Jugador2);
         
-        int Jugador1 = 10;
-        int Jugador2 = 10;
-        string jugador1 = ("");
-        string jugador2 = ("");
-
-        while(Jugador1 != 0 && Jugador2 != 0)
+        int ronda = 0;
+        
+        while (!boxeador1.KO() && !boxeador2.KO())
         {
-            boxeador.Golpe(jugador1);
-            boxeador.NoBloq(jugador2);
-            if (jugador1 == jugador2)
+            ronda++;
+            string Golpe = boxeador1.Pelea();
+            string NoBloq = boxeador2.Pelea();
+            if (Golpe == NoBloq)
             {
-                Jugador2 -= 1;
-                Console.WriteLine($"Jugador 2: Te quedan {Jugador2} vidas");
-            }
-            boxeador.Golpe(jugador1);
-            boxeador.NoBloq(jugador2);
-            if (jugador1 == jugador2)
-            {
-                Jugador1 -= 1;
-                Console.WriteLine($"Jugador 1: Te quedan {Jugador1} vidas");
+                if (ronda % 2 == 0)
+                {
+                    boxeador2.PierdeVida();
+                    Console.WriteLine($"Ronda {ronda}: {boxeador1.Nom} da un golpe en {Golpe} a {boxeador2.Nom} y pierde una vida le quedan {boxeador2.Vidas} vidas.");
+                }
+                else
+                {
+                    boxeador1.PierdeVida();
+                    Console.WriteLine($"Ronda {ronda}: {boxeador2.Nom} da un golpe en {NoBloq} a {boxeador1.Nom} y pierde una vida le quedan {boxeador1.Vidas} vidas.");
+                }
             }
         }
     }

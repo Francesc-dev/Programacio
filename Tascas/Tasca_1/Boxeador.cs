@@ -2,11 +2,20 @@ namespace Tasca_1;
 
 public class Boxeador
 {
-    public string Golpe(string golpe)  
+    public Boxeador(string nomBoxeador)
     {
-        Random randompunch = new Random();
-        int numero = randompunch.Next(0, 3);
-        golpe = numero switch
+        Nom = nomBoxeador;
+        Vidas = 10;
+    }
+    
+    public string Nom { get; }
+    public int Vidas { get; set; }
+
+    public string Pelea ()
+    {
+        Random random = new Random();
+        int numero = random.Next(0, 3);
+        string golpe = numero switch
         {
             0 => "cabeza",
             1 => "hombro derecho",
@@ -15,17 +24,17 @@ public class Boxeador
         };
         return golpe;
     }
-    public string NoBloq(string nobloq)
+    
+    public void PierdeVida ()
     {
-        Random randomnobloq = new Random();
-        int numero = randomnobloq.Next(0, 3);
-        nobloq = numero switch
+        Vidas -= 1;
+    }
+    
+    public bool KO () {
+        if (Vidas == 0)
         {
-            0 => "cabeza",
-            1 => "hombro derecho",
-            2 => "hombro izquierdo",
-            3 => "abdomen",
-        };
-        return nobloq;
+            return true;
+        }
+        return false;
     }
 }
